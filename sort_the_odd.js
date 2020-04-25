@@ -1,7 +1,7 @@
 const sortArray = (array) => {
   let odd = [];
   for (let i in array) array[i] % 2 != 0 ? odd.push(array[i]) : "";
-  odd.sort(function (a, b) {
+  odd.sort((a, b) => {
     return a - b;
   });
 
