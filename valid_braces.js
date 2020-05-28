@@ -2,15 +2,11 @@ const validBraces = (braces) => {
   let arr = [];
 
   for (let i = 0; i < braces.length; i++) {
-    braces[i] === "{"
-      ? arr.unshift("}")
-      : braces[i] === "["
-      ? arr.unshift("]")
-      : braces[i] === "("
-      ? arr.unshift(")")
-      : braces[i] !== arr[0]
-      ? false
-      : arr.shift();
+    if (braces[i] === "{") arr.unshift("}");
+    else if (braces[i] === "[") arr.unshift("]");
+    else if (braces[i] === "(") arr.unshift(")");
+    else if (braces[i] !== arr[0]) return false;
+    else arr.shift();
   }
   return arr.length === 0;
 };
