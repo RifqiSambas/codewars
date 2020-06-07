@@ -11,3 +11,4 @@ const sumDigPow = (a, b) => {
 
   return result;
 };
+
